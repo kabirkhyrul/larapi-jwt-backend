@@ -1,3 +1,4 @@
 *
 !public/
 !.gitignore
+!Laravel8 Rest api backend with JWT auth.postman_collection.json

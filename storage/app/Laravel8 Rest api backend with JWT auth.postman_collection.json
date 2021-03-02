@@ -1,0 +1,1298 @@
+{
+	"info": {
+		"_postman_id": "fec9660e-450f-476f-8b66-0f67f5406221",
+		"name": "Laravel8 Rest api backend with JWT auth",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "api/login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "k@a.com",
+							"description": "email from your credentials",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123456",
+							"description": "password from your credentials",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}/api/login",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "api/login",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "k@a.com",
+									"description": "email from your credentials",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123456",
+									"description": "password from your credentials",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/api/login",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"login"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx/1.14.0 (Ubuntu)"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 01 Mar 2021 14:53:12 GMT"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "gzip"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"access_token\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9vcmlvbi50ZXN0XC9hcGlcL2xvZ2luIiwiaWF0IjoxNjE0NjEwMzkyLCJleHAiOjE2MTQ2MTM5OTIsIm5iZiI6MTYxNDYxMDM5MiwianRpIjoiOXF5Ymprc1AzVjNGRVlsRyIsInN1YiI6MiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.xw-qMoUUdT_KqJHrqrKeJEYuyB6PmsKGmiKy3AQdMgo\",\n    \"token_type\": \"bearer\"\n}"
+				}
+			]
+		},
+		{
+			"name": "api/signup",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Kabir",
+							"description": "full name of user",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "k@g.com",
+							"description": "email for credential",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123456",
+							"description": "password for credential",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}/api/signup",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"signup"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "api/signup",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/api/signup?name=Kabir&email=k@g.com&password=123456",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"signup"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "Kabir",
+									"description": "full name of user"
+								},
+								{
+									"key": "email",
+									"value": "k@g.com",
+									"description": "email for credential"
+								},
+								{
+									"key": "password",
+									"value": "123456",
+									"description": "password for credential"
+								}
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx/1.14.0 (Ubuntu)"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 01 Mar 2021 14:54:56 GMT"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"ok\",\n    \"token\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9vcmlvbi50ZXN0XC9hcGlcL3NpZ251cCIsImlhdCI6MTYxNDYxMDQ5NiwiZXhwIjoxNjE0NjE0MDk2LCJuYmYiOjE2MTQ2MTA0OTYsImp0aSI6IkRMeURpaEdMMFFmOVdzTDEiLCJzdWIiOjMsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.P-GNYA0NjjRmjljUN4Flm7WjnTwptaWo-H3NXvsvBgE\"\n}"
+				}
+			]
+		},
+		{
+			"name": "api/logout",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9vcmlvbi50ZXN0XC9hcGlcL2xvZ2luIiwiaWF0IjoxNjE0NjA5OTM0LCJleHAiOjE2MTQ2MTM1MzQsIm5iZiI6MTYxNDYwOTkzNCwianRpIjoiQ25mTjFGdndqT29sVzBwSiIsInN1YiI6MiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.nnN7NnX-u_k2rcsxzvRCdJ-YhS6yvMOOlB4s0JLLSkI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}"
+					}
+				],
+				"url": {
+					"raw": "{{base_url}}/api/logout",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"logout"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "api/logout",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/api/logout",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"logout"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx/1.14.0 (Ubuntu)"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 01 Mar 2021 14:52:53 GMT"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "gzip"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Successfully logged out\"\n}"
+				}
+			]
+		},
+		{
+			"name": "api/me",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9vcmlvbi50ZXN0XC9hcGlcL2xvZ2luIiwiaWF0IjoxNjE0NjEwMzkyLCJleHAiOjE2MTQ2MTM5OTIsIm5iZiI6MTYxNDYxMDM5MiwianRpIjoiOXF5Ymprc1AzVjNGRVlsRyIsInN1YiI6MiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.xw-qMoUUdT_KqJHrqrKeJEYuyB6PmsKGmiKy3AQdMgo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}"
+					}
+				],
+				"url": {
+					"raw": "{{base_url}}/api/me",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"me"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "api/me",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/api/me",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"me"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx/1.14.0 (Ubuntu)"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 01 Mar 2021 14:58:07 GMT"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "gzip"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 2,\n    \"name\": \"Kabir\",\n    \"email\": \"k@a.com\",\n    \"email_verified_at\": null,\n    \"created_at\": \"2021-03-01T13:36:08.000000Z\",\n    \"updated_at\": \"2021-03-01T13:36:08.000000Z\"\n}"
+				}
+			]
+		},
+		{
+			"name": "api/products",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9vcmlvbi50ZXN0XC9hcGlcL2xvZ2luIiwiaWF0IjoxNjE0NjEwMzkyLCJleHAiOjE2MTQ2MTM5OTIsIm5iZiI6MTYxNDYxMDM5MiwianRpIjoiOXF5Ymprc1AzVjNGRVlsRyIsInN1YiI6MiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.xw-qMoUUdT_KqJHrqrKeJEYuyB6PmsKGmiKy3AQdMgo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}"
+					}
+				],
+				"url": {
+					"raw": "{{base_url}}/api/products",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"products"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "api/products",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/api/products",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"products"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx/1.14.0 (Ubuntu)"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 01 Mar 2021 14:58:35 GMT"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "58"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "gzip"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 1,\n        \"title\": \"Awesome Marble Shirt\",\n        \"image\": \"https://placehold.it/250x250.jpg/f00/000000\",\n        \"price\": 2.1,\n        \"description\": \"I wish you could keep it to be afraid of them!' 'And who are THESE?' said the Caterpillar. 'Well, I shan't go, at any rate, the Dormouse again, so that her shoulders were nowhere to be afraid of it. She felt that she was up to the jury, of course--\\\"I.\",\n        \"created_at\": \"2021-03-01T02:40:01.000000Z\",\n        \"updated_at\": \"2021-03-01T02:40:01.000000Z\"\n    },\n    {\n        \"id\": 2,\n        \"title\": \"Intelligent Leather Pants\",\n        \"image\": \"https://placehold.it/250x250.jpg/f00/000000\",\n        \"price\": 2.59,\n        \"description\": \"And it'll fetch things when you throw them, and then all the creatures argue. It's enough to try the experiment?' 'HE might bite,' Alice cautiously replied, not feeling at all a proper way of escape, and wondering what to uglify is, you know. Come on!'.\",\n        \"created_at\": \"2021-03-01T02:40:01.000000Z\",\n        \"updated_at\": \"2021-03-01T02:40:01.000000Z\"\n    },\n    {\n        \"id\": 3,\n        \"title\": \"Synergistic Granite Keyboard\",\n        \"image\": \"https://placehold.it/250x250.jpg/f00/000000\",\n        \"price\": 2.22,\n        \"description\": \"William the Conqueror.' (For, with all her wonderful Adventures, till she shook the house, and wondering what to do it.' (And, as you might catch a bad cold if she had been found and handed back to my boy, I beat him when he pleases!' CHORUS. 'Wow! wow!.\",\n        \"created_at\": \"2021-03-01T02:40:01.000000Z\",\n        \"updated_at\": \"2021-03-01T02:40:01.000000Z\"\n    },\n    {\n        \"id\": 4,\n        \"title\": \"Rustic Marble Shirt\",\n        \"image\": \"https://placehold.it/250x250.jpg/f00/000000\",\n        \"price\": 2.7199999999999998,\n        \"description\": \"Writhing, of course, to begin with,' said the King; 'and don't be particular--Here, Bill! catch hold of it; and as he spoke. 'A cat may look at all like the Mock Turtle said: 'no wise fish would go round and swam slowly back to finish his story. CHAPTER.\",\n        \"created_at\": \"2021-03-01T02:40:01.000000Z\",\n        \"updated_at\": \"2021-03-01T02:40:01.000000Z\"\n    },\n    {\n        \"id\": 5,\n        \"title\": \"Durable Marble Table\",\n        \"image\": \"https://placehold.it/250x250.jpg/f00/000000\",\n        \"price\": 2.83,\n        \"description\": \"The Mock Turtle in a confused way, 'Prizes! Prizes!' Alice had got its head impatiently, and walked a little worried. 'Just about as curious as it can be,' said the March Hare and the choking of the Lobster Quadrille?' the Gryphon whispered in reply.\",\n        \"created_at\": \"2021-03-01T02:40:01.000000Z\",\n        \"updated_at\": \"2021-03-01T02:40:01.000000Z\"\n    },\n    {\n        \"id\": 6,\n        \"title\": \"Intelligent Cotton Clock\",\n        \"image\": \"https://placehold.it/250x250.jpg/f00/000000\",\n        \"price\": 2.71,\n        \"description\": \"The Hatter's remark seemed to follow, except a tiny little thing!' It did so indeed, and much sooner than she had never been in a frightened tone. 'The Queen will hear you! You see, she came upon a low voice, 'Why the fact is, you know. So you see.\",\n        \"created_at\": \"2021-03-01T02:40:01.000000Z\",\n        \"updated_at\": \"2021-03-01T02:40:01.000000Z\"\n    },\n    {\n        \"id\": 7,\n        \"title\": \"Rustic Wool Table\",\n        \"image\": \"https://placehold.it/250x250.jpg/f00/000000\",\n        \"price\": 2.77,\n        \"description\": \"March Hare. 'Exactly so,' said Alice. 'Come on, then,' said the Mouse. '--I proceed. \\\"Edwin and Morcar, the earls of Mercia and Northumbria, declared for him: and even Stigand, the patriotic archbishop of Canterbury, found it so VERY tired of being such.\",\n        \"created_at\": \"2021-03-01T02:40:01.000000Z\",\n        \"updated_at\": \"2021-03-01T02:40:01.000000Z\"\n    },\n    {\n        \"id\": 8,\n        \"title\": \"Awesome Cotton Lamp\",\n        \"image\": \"https://placehold.it/250x250.jpg/f00/000000\",\n        \"price\": 2.39,\n        \"description\": \"YOU must cross-examine the next witness!' said the King. 'I can't go no lower,' said the Caterpillar. 'Well, perhaps your feelings may be different,' said Alice; 'it's laid for a little recovered from the sky! Ugh, Serpent!' 'But I'm not used to know.\",\n        \"created_at\": \"2021-03-01T02:40:01.000000Z\",\n        \"updated_at\": \"2021-03-01T02:40:01.000000Z\"\n    },\n    {\n        \"id\": 9,\n        \"title\": \"Sleek Iron Computer\",\n        \"image\": \"https://placehold.it/250x250.jpg/f00/000000\",\n        \"price\": 2.41,\n        \"description\": \"Cheshire Cat sitting on a three-legged stool in the wind, and was looking at Alice as she had a VERY turn-up nose, much more like a steam-engine when she first saw the Mock Turtle, suddenly dropping his voice; and the White Rabbit interrupted.\",\n        \"created_at\": \"2021-03-01T02:40:01.000000Z\",\n        \"updated_at\": \"2021-03-01T02:40:01.000000Z\"\n    },\n    {\n        \"id\": 10,\n        \"title\": \"Practical Steel Gloves\",\n        \"image\": \"https://placehold.it/250x250.jpg/f00/000000\",\n        \"price\": 2.08,\n        \"description\": \"William the Conqueror.' (For, with all her wonderful Adventures, till she shook the house, quite forgetting in the pool a little timidly, for she was considering in her hands, and was suppressed. 'Come, that finished the first position in which case it.\",\n        \"created_at\": \"2021-03-01T02:40:01.000000Z\",\n        \"updated_at\": \"2021-03-01T02:40:01.000000Z\"\n    },\n    {\n        \"id\": 11,\n        \"title\": \"my product\",\n        \"image\": \"/tmp/phpD4AKcv\",\n        \"price\": 100,\n        \"description\": \"best prodcut\",\n        \"created_at\": \"2021-03-01T14:29:37.000000Z\",\n        \"updated_at\": \"2021-03-01T14:29:37.000000Z\"\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "api/products",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9vcmlvbi50ZXN0XC9hcGlcL2xvZ2luIiwiaWF0IjoxNjE0NjEwMzkyLCJleHAiOjE2MTQ2MTM5OTIsIm5iZiI6MTYxNDYxMDM5MiwianRpIjoiOXF5Ymprc1AzVjNGRVlsRyIsInN1YiI6MiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.xw-qMoUUdT_KqJHrqrKeJEYuyB6PmsKGmiKy3AQdMgo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "title",
+							"value": " API product entry",
+							"description": "title of product",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": " a good from product entered by API",
+							"description": "description of product",
+							"type": "text"
+						},
+						{
+							"key": "price",
+							"value": "10",
+							"description": "price of product",
+							"type": "text"
+						},
+						{
+							"key": "image",
+							"description": "image of product",
+							"type": "file",
+							"src": "/home/kabir/Desktop/A-brown-cat-licking-its-lips-400x400.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}/api/products",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"products"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "api/products",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": " API product entry",
+									"description": "title of product",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": " a good from product entered by API",
+									"description": "description of product",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "10",
+									"description": "price of product",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"description": "image of product",
+									"type": "file",
+									"src": "/home/kabir/Desktop/A-brown-cat-licking-its-lips-400x400.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/api/products",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"products"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx/1.14.0 (Ubuntu)"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 01 Mar 2021 15:10:40 GMT"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "58"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"title\": \"API product entry\",\n    \"price\": \"10\",\n    \"description\": \"a good from product entered by API\",\n    \"image\": \"http://orion.test/storage/0Qe4r4cuMuTExTE0TmBjm5r4QaGoIQ6w52sr1cNT.jpg\",\n    \"updated_at\": \"2021-03-01T15:10:40.000000Z\",\n    \"created_at\": \"2021-03-01T15:10:40.000000Z\",\n    \"id\": 14\n}"
+				}
+			]
+		},
+		{
+			"name": "api/products update",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9vcmlvbi50ZXN0XC9hcGlcL2xvZ2luIiwiaWF0IjoxNjE0NjEwMzkyLCJleHAiOjE2MTQ2MTM5OTIsIm5iZiI6MTYxNDYxMDM5MiwianRpIjoiOXF5Ymprc1AzVjNGRVlsRyIsInN1YiI6MiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.xw-qMoUUdT_KqJHrqrKeJEYuyB6PmsKGmiKy3AQdMgo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "id",
+							"value": "11",
+							"description": "title of product",
+							"type": "text"
+						},
+						{
+							"key": "title",
+							"value": " API product Update",
+							"description": "description of product",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": " a good from product entered by API",
+							"description": "price of product",
+							"type": "text"
+						},
+						{
+							"key": "price",
+							"value": "10",
+							"description": "image of product",
+							"type": "text"
+						},
+						{
+							"key": "image",
+							"description": "image of product",
+							"type": "file",
+							"src": "/home/kabir/Desktop/A-brown-cat-licking-its-lips-400x400.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}/api/products",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"products"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "api/products update",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "id",
+									"value": "11",
+									"description": "title of product",
+									"type": "text"
+								},
+								{
+									"key": "title",
+									"value": " API product Update",
+									"description": "description of product",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": " a good from product entered by API",
+									"description": "price of product",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "10",
+									"description": "image of product",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"description": "image of product",
+									"type": "file",
+									"src": "/home/kabir/Desktop/A-brown-cat-licking-its-lips-400x400.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/api/products",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"products"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx/1.14.0 (Ubuntu)"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 01 Mar 2021 15:32:10 GMT"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "58"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "gzip"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 11,\n    \"title\": \"API product Update\",\n    \"image\": \"http://orion.test/storage/hRp3VPV2yPmEN9kJanVQKXMWxpS2Zfq6v2jVinuY.jpg\",\n    \"price\": \"10\",\n    \"description\": \"a good from product entered by API\",\n    \"created_at\": \"2021-03-01T14:29:37.000000Z\",\n    \"updated_at\": \"2021-03-01T15:32:10.000000Z\"\n}"
+				}
+			]
+		},
+		{
+			"name": "api/products/{product}",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9vcmlvbi50ZXN0XC9hcGlcL2xvZ2luIiwiaWF0IjoxNjE0NjEwMzkyLCJleHAiOjE2MTQ2MTM5OTIsIm5iZiI6MTYxNDYxMDM5MiwianRpIjoiOXF5Ymprc1AzVjNGRVlsRyIsInN1YiI6MiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.xw-qMoUUdT_KqJHrqrKeJEYuyB6PmsKGmiKy3AQdMgo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}"
+					}
+				],
+				"url": {
+					"raw": "{{base_url}}/api/products/13",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"products",
+						"13"
+					],
+					"query": [
+						{
+							"key": "product",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "api/products/{product}",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/api/products/13",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"products",
+								"13"
+							],
+							"query": [
+								{
+									"key": "product",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "Found",
+					"code": 302,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx/1.14.0 (Ubuntu)"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 01 Mar 2021 15:12:22 GMT"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "58"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 13,\n    \"title\": \"API product entry\",\n    \"image\": \"http://orion.test/storage/JBgE4L55AaMtgzAUpHjSqyaMRwl6n6y8hX1LB2J9.jpg\",\n    \"price\": 10,\n    \"description\": \"a good from product entered by API\",\n    \"created_at\": \"2021-03-01T15:10:12.000000Z\",\n    \"updated_at\": \"2021-03-01T15:10:12.000000Z\"\n}"
+				}
+			]
+		},
+		{
+			"name": "api/products/{product}",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9vcmlvbi50ZXN0XC9hcGlcL2xvZ2luIiwiaWF0IjoxNjE0NjEwMzkyLCJleHAiOjE2MTQ2MTM5OTIsIm5iZiI6MTYxNDYxMDM5MiwianRpIjoiOXF5Ymprc1AzVjNGRVlsRyIsInN1YiI6MiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.xw-qMoUUdT_KqJHrqrKeJEYuyB6PmsKGmiKy3AQdMgo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}"
+					}
+				],
+				"url": {
+					"raw": "{{base_url}}/api/products/1",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"products",
+						"1"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "api/products/{product}",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/api/products/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"products",
+								"1"
+							]
+						}
+					},
+					"status": "Found",
+					"code": 302,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx/1.14.0 (Ubuntu)"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 01 Mar 2021 15:16:20 GMT"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "\"Awesome Marble Shirt removed!\""
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "http://larapi-jwt-backend.test"
+		},
+		{
+			"key": "token",
+			"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sYXJhcGktand0LWJhY2tlbmQudGVzdFwvYXBpXC9sb2dpbiIsImlhdCI6MTYxNDY1NjUwOSwiZXhwIjoxNjE0NjYwMTA5LCJuYmYiOjE2MTQ2NTY1MDksImp0aSI6InpYVW55ZUdrSEJhWWYyWVIiLCJzdWIiOjQsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.6AKiuf_RrLOxwuGu613HGori-ZnY7wuKdUrmZbtqT3o"
+		}
+	]
+}
