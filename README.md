@@ -49,7 +49,9 @@ code .
 php artisan jwt:secret
 
 # clear and cache config
-php artisan config:clear
+php artisan optimize:clear
+
+php artisan key:generate
 
 php artisan config:cache
 
